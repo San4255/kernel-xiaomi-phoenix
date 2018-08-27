@@ -685,7 +685,7 @@ config VSERVICES_VTTY_COUNT
 	help
 	  The maximum number of Virtual Services serial devices to support.
 	  This limit applies to both the client and server.
-=======
+
 config RANDOM_TRUST_CPU
 	bool "Trust the CPU manufacturer to initialize Linux's CRNG"
 	depends on X86 || S390 || PPC
@@ -698,6 +698,5 @@ config RANDOM_TRUST_CPU
 	that CPU manufacturer (perhaps with the insistence or mandate
 	of a Nation State's intelligence or law enforcement agencies)
 	has not installed a hidden back door to compromise the CPU's
-	random number generation facilities.
-
->>>>>>> 923eb78099e0 (random: add a config option to trust the CPU's hwrng)
+	random number generation facilities. This can also be configured
+	at boot with "random.trust_cpu=on/off".
